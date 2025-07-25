@@ -1,0 +1,14 @@
+flask
+flask-SQLAlchemy
+psycopg2-binary
+flask-socketio
+python-dotenv
+eventlet
+flask-wtf
+email-validator
+flask-sqlalchemy
+flask-bcrypt
+flask-login
+pillow
+flask-mail
+itsdangerous

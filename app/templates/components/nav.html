@@ -1,0 +1,35 @@
+<header id="header" class="flex items-center justify-between h-16 px-5 z-1 sticky lg:px-30">
+  <a href="{{ url_for('main.home') }}">
+    <h5 class="text-[24px] text-[#1B9E4B] font-medium">ewonu</h5>
+  </a>
+  <div id="ham" class="lg:hidden space-y-1 cursor-pointer *:w-6 *:h-[2px] *:bg-[#6B7280] z-150 absolute right-5 top-7">
+    <div id="line1"></div>
+    <div id="line2"></div>
+    <div id="line3"></div>
+  </div>
+  <nav id="nav" class="lg:hidden *:opacity-0 w-0 absolute z-100 flex flex-col items-center gap-y-5 text-2xl text-white overflow-hidden h-[100vh] top-0 right-0 bg-[#0C4521] *:hover:underline *:transition-all *:duration-300">
+    <a id="nav-item" href="{{ url_for('main.home') }}">Home</a>
+    <a id="nav-item" href="{{ url_for('main.faq') }}">FAQ</a>
+    <a id="nav-item" href="{{ url_for('main.contact') }}">Contact</a>
+    <a id="nav-item" href="{{ url_for('users.login') }}">Login</a>
+    <a id="nav-item" href="{{ url_for('users.register') }}">Register</a>
+  </nav>
+  <nav class="hidden lg:flex lg:items-center lg:justify-between lg:pr-30 lg:w-4/5">
+    <div class="text-[#2B2C34] lg:w-3/5 flex justify-end gap-x-15 cursor-pointer *:hover:underline *:transition-all *:duration-300">
+      <a href="{{ url_for('main.home') }}">Home</a>
+      <a href="{{ url_for('main.faq') }}">FAQ</a>
+      <a href="{{ url_for('main.contact') }}">Contact</a>
+    </div>
+    <div class="lg:w-1/5 flex justify-between">
+      <button class="bg-transparent border-1 border-[#FFFFFE] border-solid text-[#FFFFFE] py-2 px-4 rounded-sm cursor-pointer hover:bg-[#1B9E4B] transition-all duration-300">
+        <a href="{{ url_for('users.login') }}">Login</a>
+      </button>
+      <button class="bg-[#1B9E4B] text-[#FFFFFE] py-2 px-4 rounded-sm cursor-pointer hover:bg-[#147638] active:bg-[#0F592A] transition-all duration-300">
+        <a href="{{ url_for('users.register') }}">Register</a>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script src="{{ url_for('static', filename='scripts/components/nav.js') }}"></script>
+<script src="{{ url_for('static', filename='scripts/gsap.js') }}"></script>

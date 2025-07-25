@@ -1,0 +1,27 @@
+<main class="absolute px-3 flex flex-col items-center">
+  <div>
+    <div class="flex gap-2 *:flex *:flex-col *:gap-y-2">
+      <div id="images-1" class="relative top-0">
+        <image src="{{ url_for('static', filename="images/hero-image-1.png")}}" alt="hero-image" />
+        <image src="{{ url_for('static', filename="images/hero-image-2.png")}}" alt="hero-image" />
+      </div>
+      <div id="images-2" class="relative">
+        <image src="{{ url_for('static', filename="images/hero-image-3.png")}}" alt="hero-image" />
+        <image src="{{ url_for('static', filename="images/hero-image-4.png")}}" alt="hero-image" />
+      </div>
+      <div id="images-3" class="relative top-0">
+        <image src="{{ url_for('static', filename="images/hero-image-5.png")}}" alt="hero-image" />
+        <image src="{{ url_for('static', filename="images/hero-image-6.png")}}" alt="hero-image" />
+      </div>
+    </div>
+    <div>
+
+    </div>
+  </div>
+  
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+<script src="{{ url_for('static', filename='scripts/components/hero.js') }}"></script>
+<script src="{{ url_for('static', filename='scripts/gsap.js') }}"></script>

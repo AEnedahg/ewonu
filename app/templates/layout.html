@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% if title %}
+    <title>{{ title }}</title>
+  {% else %}
+    <title>Ewonu – Connect, Chat & Share Freely</title>
+  {% endif %}
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.8/dist/lenis.css">
+  <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet"/>
+  <meta name="title" content="Ewonu – Connect, Chat & Share Freely">
+  <meta name="description" content="Ewonu is a modern social chat app where you can connect with friends, chat in real-time, and share your world. Join the conversation today.">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ewonu.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ewonu.com/">
+  <meta property="og:title" content="Ewonu – Connect, Chat & Share Freely">
+  <meta property="og:description" content="Ewonu is a modern social chat app where you can connect with friends, chat in real-time, and share your world. Join the conversation today.">
+  <meta property="og:image" content="https://www.ewonu.com/assets/og-image.jpg"> <!-- Replace with actual image URL -->
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.ewonu.com/">
+  <meta name="twitter:title" content="Ewonu – Connect, Chat & Share Freely">
+  <meta name="twitter:description" content="Ewonu is a modern social chat app where you can connect with friends, chat in real-time, and share your world. Join the conversation today.">
+  <meta name="twitter:image" content="https://www.ewonu.com/assets/twitter-image.jpg"> <!-- Replace with actual image URL -->
+
+  <!-- Favicon -->
+  <link rel="icon" href="../static//images/logo.svg" type="image/x-icon">
+
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Keywords (optional) -->
+  <meta name="keywords" content="Ewonu, chat app, social media, messaging, connect, real-time chat, social app, share moments">
+
+  <!-- Author -->
+  <meta name="author" content="Anthony Enedah">
+
+</head>
+<body>
+  {% block content %}
+  {% endblock %}
+
+  <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script> 
+  <script src="{{ url_for('static', filename='scripts/gsap.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smooth: true,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    });
+  </script>
+</body>
+</html>
