@@ -17,6 +17,8 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-medium: 500;
     --radius-sm: 0.25rem;
     --default-transition-duration: 150ms;
@@ -222,6 +224,9 @@
   .right-5 {
     right: calc(var(--spacing) * 5);
   }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
   .z-1 {
     z-index: 1;
   }
@@ -307,6 +312,20 @@
       margin-block-end: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
+  .space-y-3 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-4 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
   .gap-x-4 {
     column-gap: calc(var(--spacing) * 4);
   }
@@ -346,6 +365,9 @@
     --tw-border-style: solid;
     border-style: solid;
   }
+  .border-\[\#1B9E4B\] {
+    border-color: #1B9E4B;
+  }
   .border-\[\#FFFFFE\] {
     border-color: #FFFFFE;
   }
@@ -373,12 +395,19 @@
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -399,6 +428,12 @@
   }
   .text-\[\#FFFFFE\] {
     color: #FFFFFE;
+  }
+  .text-\[2B2C34\] {
+    color: 2B2C34;
+  }
+  .text-\[black\] {
+    color: black;
   }
   .text-white {
     color: var(--color-white);

@@ -12,3 +12,4 @@ flask-login
 pillow
 flask-mail
 itsdangerous
+gunicorn
