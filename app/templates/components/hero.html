@@ -1,6 +1,6 @@
-<main class="absolute px-3 flex flex-col items-center">
-  <div class="relative">
-    <div class="flex gap-2 *:flex *:flex-col *:gap-y-2">
+<main class="absolute px-3 flex flex-col items-center lg:px-30 lg:h-[600px] border-solid border-1">
+  <div class="relative flex flex-col lg:flex-row-reverse lg:items-center lg:h-full lg:gap-x-10">
+    <div class="relative flex gap-4 *:flex *:flex-col *:gap-y-4 h-full lg:w-4/6">
       <div id="images-1" class="relative top-0">
         <image src="{{ url_for('static', filename="images/hero-image-1.png")}}" alt="hero-image" />
         <image src="{{ url_for('static', filename="images/hero-image-2.png")}}" alt="hero-image" />
@@ -14,14 +14,14 @@
         <image src="{{ url_for('static', filename="images/hero-image-6.png")}}" alt="hero-image" />
       </div>
     </div>
-    <div class="space-y-4 absolute bottom-0">
-      <h1 class="text-[] text-3xl">Connect. Chat. Share Seamlessly with Ewonu</h1>
-      <p class="text-[#2B2C34]">Ewonu is your modern social chat space for real-time messaging, smart groups, and meaningful connection</p>
+    <div class="space-y-4 lg:w-3/6">
+      <h1 class="text-[#2B2C34]] text-3xl font-semibold lg:text-5xl">Connect. Chat. Share Seamlessly with Ewonu</h1>
+      <p class="text-[#2B2C34] lg:text-2xl">Ewonu is your modern social chat space for real-time messaging, smart groups, and meaningful connection</p>
       <div class="flex gap-x-5">
-        <button class="bg-transparent border-1 border-[#1B9E4B] border-solid text-[#1B9E4B] py-1 px-4 rounded-sm cursor-pointer hover:bg-[#1B9E4B] transition-all duration-300">
+        <button class="bg-transparent border-1 border-[#1B9E4B] border-solid text-[#1B9E4B] py-2 px-4 rounded-sm cursor-pointer hover:text-[#FFFFFE] hover:bg-[#1B9E4B] transition-all duration-300">
           <a href="{{ url_for('users.login') }}">Login</a>
         </button>
-        <button class="bg-[#1B9E4B] text-[#FFFFFE] py-1 px-4 rounded-sm cursor-pointer hover:bg-[#147638] active:bg-[#0F592A] transition-all duration-300">
+        <button class="bg-[#1B9E4B] text-[#FFFFFE] py-2 px-4 rounded-sm cursor-pointer hover:bg-[#147638] active:bg-[#0F592A] transition-all duration-300">
           <a href="{{ url_for('users.register') }}">Register</a>
         </button>
       </div>
