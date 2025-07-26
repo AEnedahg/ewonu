@@ -1,5 +1,5 @@
 # Use official Python base image
-FROM python:3.10-slim
+FROM python:3.10
 
 # Set work directory
 WORKDIR /app
@@ -10,6 +10,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy source code
 COPY . .
+
+EXPOSE 10000
 
 # Run the application
 CMD ["gunicorn", "-b", "0.0.0.0:10000", "app:app"]
